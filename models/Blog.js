@@ -21,7 +21,12 @@ Blog.init(
             },
           },
           }
-        },)
+        },{
+          sequelize
+        }
+        );
+
+    module.exports = Blog
 
 
 
