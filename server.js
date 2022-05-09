@@ -4,7 +4,8 @@ const exphbs = require("express-handlebars");
 const session = require("express-session");
 const sequelize = require("./config/connection");
 const SequelizeStore = require("connect-session-sequelize")(session.Store);
-
+require('dotenv').config();
+const cloudinary = require('cloudinary');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
@@ -33,6 +34,12 @@ app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
 
 // app.use("/", allRoutes);
+console.log(process.env.CLOUD);
+cloudinary.config({ 
+  cloud_name:process.env.CLOUD_NAME,
+  api_key:process.env.API_KEY,
+  api_secret:process.env.API_SECRET
+});
 
 sequelize.sync({ force: false }).then(function() {
   app.listen(PORT, function() {
