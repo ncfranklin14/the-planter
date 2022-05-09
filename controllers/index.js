@@ -3,4 +3,4 @@ const router = express.Router();
 
 const profileRoutes = require("./profileRoutes")
 
-const galleryRoutes = require("./galleryRoutes")
+const galleryRoutes = require("./blogRoutes")
