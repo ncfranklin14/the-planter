@@ -8,6 +8,8 @@ const helpers = require('./utils/helpers');
 const path = require('path');
 
 //Sets up the Express App
+require('dotenv').config();
+const cloudinary = require('cloudinary');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
@@ -34,6 +36,13 @@ app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
 
 app.use(allRoutes);
+// app.use("/", allRoutes);
+console.log(process.env.CLOUD);
+cloudinary.config({ 
+  cloud_name:process.env.CLOUD_NAME,
+  api_key:process.env.API_KEY,
+  api_secret:process.env.API_SECRET
+});
 
 sequelize.sync({ force: false }).then(function() {
   app.listen(PORT, function() {

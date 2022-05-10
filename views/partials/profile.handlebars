@@ -1,0 +1,15 @@
+<h1>Welcome back {{username}}</h1>
+<h2>All your blogs:</h2>
+<form action="" id="newBlog">
+    <input type="text" id="title" placeholder="title">
+    <textarea id="body" cols="30" rows="10"></textarea>
+    <button>Submit</button>
+</form>
+{{#each Blogs}}
+    <h3>{{title}}</h3>
+    <p>{{body}}</p>
+    <button>delete</button>
+    <hr>
+{{/each}}
+
+<script src="/js/profile.js"></script>
