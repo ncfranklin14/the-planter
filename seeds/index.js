@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const sequelize = require("../config/connection")
 const {User,Blog} = require("../models")
 
@@ -49,3 +50,5 @@ document.querySelector("#login").addEventListener("submit",e=>{
       }
   })
 })
+=======
+>>>>>>> dev
