@@ -17,6 +17,7 @@ document.querySelector("#login").addEventListener("submit",e=>{
   }).then(res=>{
       if(res.ok){
           console.log("logged in!")
+          document.location.replace = "/gallery"
       } else {
           alert("trumpet sound")
       }

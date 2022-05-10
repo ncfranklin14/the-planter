@@ -1,10 +1,15 @@
+const express =require('express');
 const router = require('express').Router();
 
+const frontEnd = require("./frontEndRoutes");
+router.use("/",frontEnd)
+
 const apiRoutes = require('./api');
-const homeRoutes = require('./frontEndRoutes');
+router.use('/api', apiRoutes);
+
 // const galleryRoutes = require("./api/blogRoutes")
 
-router.use('/',homeRoutes);
-router.use('/api', apiRoutes);
+const sessionRoutes = require("./sessionRoutes");
+router.use("/sessions",sessionRoutes);
 
 module.exports = router;
