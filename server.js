@@ -29,14 +29,13 @@ const sess = {
 //Inform Express.js on which template engine to use
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-app.use(express.static(path.join(__durname,'public')));
+// app.use(express.static(path.join(__durname,'public')));
 
 const hbs = exphbs.create({});
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
 
-app.use(allRoutes);
-// app.use("/", allRoutes);
+app.use("/", allRoutes);
 console.log(process.env.CLOUD);
 cloudinary.config({ 
   cloud_name:process.env.CLOUD_NAME,
