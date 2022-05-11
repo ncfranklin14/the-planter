@@ -2,7 +2,8 @@ const sequelize = require("../config/connection")
 const { User, Blog } = require("../models")
 
 const seed = async () => {
-    const users = await User.bulkCreate(
+    await sequelize.sync({force:true})
+     await User.bulkCreate(
         [
             {
                 username: "ester",
@@ -21,7 +22,7 @@ const seed = async () => {
             }
         ])
 
-    const blogs = await Blog.bulkCreate(
+     await Blog.bulkCreate(
         [
             {
                 title: "my first blog",
@@ -44,7 +45,7 @@ const seed = async () => {
 }
 
 
-sequelize.sync({force: true}).then(()=>{seed()})
+seed()
 
 
 
