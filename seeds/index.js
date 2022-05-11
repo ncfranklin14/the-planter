@@ -26,19 +26,19 @@ const seed = async () => {
             {
                 title: "my first blog",
                 content: "Welcome to my blog",
-                UserId: 1,
+                user_id: 1,
                 imageUrl: "https://res.cloudinary.com/dkciyhgd8/image/upload/v1652130326/sample.jpg",
 
             },
             {
                 title: "my final blog",
                 content: "I cant do this anymore",
-                UserId: 1
+                user_id: 1
             },
             {
                 title: "Cats: a review",
                 content: "I love cats I love every kind of cat.  I want to hug all them but you cant. Cant hug every cat......Cant hug every cat. ",
-                UserId: 2
+                user_id: 2
             }
         ])
 }

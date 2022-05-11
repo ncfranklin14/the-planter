@@ -2,6 +2,28 @@ const express = require("express");
 const router = express.Router();
 const { User, Blog } = require("../../models");
 
+router.get("/", (req, res) => {
+  User.findAll({})
+    .then(dbUsers => {
+      res.json(dbUsers);
+    })
+    .catch(err => {
+      console.log(err);
+      res.status(500).json({ msg: "an error occured", err });
+    });
+});
+//find one
+router.get("/:id", (req, res) => {
+  User.findByPk(req.params.id,{})
+    .then(dbUsers => {
+      res.json(dbUsers);
+    })
+    .catch(err => {
+      console.log(err);
+      res.status(500).json({ msg: "an error occured", err });
+    });
+});
+
 router.post("/logout", (req, res) => {
 if(req.session.logged_in){
   req.session.destroy(()=> res.status(204).end())
