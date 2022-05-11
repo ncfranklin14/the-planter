@@ -1,39 +1,35 @@
-const express = require("express");
-const router = express.Router();
+const router = require('express').Router();
 const {User,Blog} = require("../../models");
+const withAuth = require('../../utils/auth')
 
-router.get("/", (req, res) => {
-    Blog.findAll({})
-      .then(dbBlogs => {
-        res.json(dbBlogs);
-      })
-      .catch(err => {
-        console.log(err);
-        res.status(500).json({ msg: "an error occured", err });
-      });
-  });
-  //find one
-  router.get("/:id", (req, res) => {
-    Blog.findByPk(req.params.id,{})
-      .then(dbBlog => {
-        res.json(dbBlog);
-      })
-      .catch(err => {
-        console.log(err);
-        res.status(500).json({ msg: "an error occured", err });
-      });
-  });
+// router.get("/", (req, res) => {
+//     Blog.findAll({})
+//       .then(dbBlogs => {
+//         res.json(dbBlogs);
+//       })
+//       .catch(err => {
+//         console.log(err);
+//         res.status(500).json({ msg: "an error occured", err });
+//       });
+//   });
+//   //find one
+//   router.get("/:id", (req, res) => {
+//     Blog.findByPk(req.params.id,{})
+//       .then(dbBlog => {
+//         res.json(dbBlog);
+//       })
+//       .catch(err => {
+//         console.log(err);
+//         res.status(500).json({ msg: "an error occured", err });
+//       });
+//   });
   
   //create Blog
-  router.post("/", (req, res) => {
-    if(!req.session.user){
-      return res.status(401).json({msg:"ya gotta login to create a blog post!"})
-  }
+  router.post("/", withAuth, (req, res) => {
+ 
     Blog.create({
-      title:req.body.title,
-      body:req.body.body,
-      imageUrl:req.body.secure_url,
-      UserId:req.session.user.id
+     ...req.body, 
+      user_id :req.session.user_id
     })
       .then(newBlog => {
         res.json(newBlog);
