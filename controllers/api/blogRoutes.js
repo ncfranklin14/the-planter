@@ -2,27 +2,27 @@ const router = require('express').Router();
 const {User,Blog} = require("../../models");
 const withAuth = require('../../utils/auth')
 
-// router.get("/", (req, res) => {
-//     Blog.findAll({})
-//       .then(dbBlogs => {
-//         res.json(dbBlogs);
-//       })
-//       .catch(err => {
-//         console.log(err);
-//         res.status(500).json({ msg: "an error occured", err });
-//       });
-//   });
-//   //find one
-//   router.get("/:id", (req, res) => {
-//     Blog.findByPk(req.params.id,{})
-//       .then(dbBlog => {
-//         res.json(dbBlog);
-//       })
-//       .catch(err => {
-//         console.log(err);
-//         res.status(500).json({ msg: "an error occured", err });
-//       });
-//   });
+router.get("/", (req, res) => {
+    Blog.findAll({})
+      .then(dbBlogs => {
+        res.json(dbBlogs);
+      })
+      .catch(err => {
+        console.log(err);
+        res.status(500).json({ msg: "an error occured", err });
+      });
+  });
+  //find one
+  router.get("/:id", (req, res) => {
+    Blog.findByPk(req.params.id,{})
+      .then(dbBlog => {
+        res.json(dbBlog);
+      })
+      .catch(err => {
+        console.log(err);
+        res.status(500).json({ msg: "an error occured", err });
+      });
+  });
   
   //create Blog
   router.post("/", withAuth, (req, res) => {
