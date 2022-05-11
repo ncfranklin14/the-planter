@@ -3,7 +3,14 @@ const {User,Blog} = require("../../models");
 const withAuth = require('../../utils/auth')
 
 router.get("/", (req, res) => {
-    Blog.findAll({})
+    Blog.findAll({
+      include: [
+        {
+          model: User,
+          attributes: ['username'],
+        },
+      ]
+    })
       .then(dbBlogs => {
         res.json(dbBlogs);
       })
