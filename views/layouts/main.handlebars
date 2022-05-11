@@ -11,6 +11,15 @@
 </head>
 <body>
     <header>
+        {{#if logged_in}}
+        <nav>
+            <ul>
+                <li><a href="/">Gallery</a></li>
+                <li><a href="/profile">Profile</a></li>
+                <li><a href="#" id="logout">Logout</a></li>
+            </ul>
+        </nav>
+        {{/if}}
     </header>
     <main>
         {{{body}}}
@@ -22,3 +31,6 @@
 </body>
 
 </html>
+{{#if logged_in}}
+<script src="/js/logout.js"></script>
+{{/if}}

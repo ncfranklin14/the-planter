@@ -2,20 +2,27 @@ const express = require("express");
 const router = express.Router();
 const { User, Blog } = require("../../models");
 
-// router.get("/logout", (req, res) => {
-//   req.session.destroy();
-//   res.json({ msg: "logged out!" });
-// });
+router.post("/logout", (req, res) => {
+if(req.session.logged_in){
+  req.session.destroy(()=> res.status(204).end())
+}else{
+  res.status(404).end()
+}
+});
 
 //create user
 router.post("/", (req, res) => {
-  User.create(req.body)
+  User.create({
+    username: req.body.username, 
+    password: req.body.password
+  })
     .then((newUser) => {
+      
       req.session.save(() => {
         req.session.user_id = newUser.id;
         req.session.logged_in = true;
 
-        res.status(200).json(userData);
+        res.status(200).json(newUser);
       });
     })
     .catch((err) => {
