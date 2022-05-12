@@ -25,8 +25,7 @@ const seed = async () => {
      await Blog.bulkCreate(
         [
             {
-                title: "my first blog",
-                content: "Welcome to my blog",
+                content: "My boyfriend gave me these pretty flowers but I can't figure out if they are more of a Queen Bees or Daphnes",
                 user_id: 1,
                 imageUrl: "https://res.cloudinary.com/dkciyhgd8/image/upload/v1652130326/sample.jpg",
 
@@ -72,14 +71,14 @@ const seed = async () => {
 
             },
             {
-                title: "my final blog",
-                content: "I cant do this anymore",
-                user_id: 1
+                content: "I got this plant from my neighbor. It's really big and green and I don't know what to name it",
+                user_id: 1,
+                imageUrl:"https://assets.pbimgs.com/pbimgs/ab/images/dp/wcm/202209/3557/img78z.jpg"
             },
             {
-                title: "Cats: a review",
-                content: "I love cats I love every kind of cat.  I want to hug all them but you cant. Cant hug every cat......Cant hug every cat. ",
-                user_id: 2
+                content: "This cactus needs help! I can't seem to tell what a fitting name for him. He looks like a bunny.",
+                user_id: 2,
+                imageUrl:"https://www.thespruce.com/thmb/avx3x1iviL6x8XS-rctHhHTtzd4=/941x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/bunny-ear-cactus-guide-5190802-hero-454fc58d4d5b4024931877d278ed14e9.jpg"
             }
         ])
 }

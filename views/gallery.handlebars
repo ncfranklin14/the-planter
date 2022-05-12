@@ -1,6 +1,7 @@
 <h1>Plant Gallery</h1>
 <div class="container">
     <div class="row">
+
         <div class="col-lg-3">
             {{#each blogList}}
             <h3>{{title}}</h3>
@@ -18,3 +19,27 @@
     </div>
 </div>
 <script src="/js/gallery.js"></script>
+
+        {{#each blogList}}
+        <div class="col s6 m3">
+            <div class="card">
+                <div class="card-image">
+                    <img src={{imageUrl}}>
+                    <span class="card-title">{{title}}</span>
+                </div>
+                <div class="card-content">
+                    <p>{{content}}</p>
+                </div>
+                <hr>
+                <div class="card-action">
+                    <form action="" placeholder="Add some name suggestions" id="{{id}}" data-id="{{id}}">
+                        <textarea id="body" cols="30" rows="10"></textarea>
+                        <button type="submit">Submit</button>
+                    </form>
+                     </div>
+                </div>
+        </div>
+         {{/each}}
+    </div>
+    <script src="/js/gallery.js"></script>
+
