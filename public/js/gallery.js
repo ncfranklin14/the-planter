@@ -29,7 +29,5 @@ element.addEventListener("submit",function(e){
       return; // parses JSON response into native JavaScript objects
     })
 
-
 }
-
 
