@@ -23,6 +23,23 @@ element.addEventListener("submit",function(e){
           'Content-Type': 'application/json'
           // 'Content-Type': 'application/x-www-form-urlencoded',
         },
+
+      
+
+        body: JSON.stringify(data) // body data type must match "Content-Type" header
+      }).then(function(response){
+       if(response.ok) {
+        document.location.reload();
+      } else {
+        alert('Failed to edit dish');
+      }
+    })
+      // return; // parses JSON response into native JavaScript objects
+
+    })
+
+
+
        
         body: JSON.stringify(data) // body data type must match "Content-Type" header
       });

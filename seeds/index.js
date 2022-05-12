@@ -30,6 +30,46 @@ const seed = async () => {
                 imageUrl: "https://res.cloudinary.com/dkciyhgd8/image/upload/v1652130326/sample.jpg",
 
             },
+        
+            {
+                title: "my first blog",
+                content: "Welcome to my blog",
+                user_id: 1,
+                imageUrl: "https://res.cloudinary.com/dkciyhgd8/image/upload/v1652130326/sample.jpg",
+
+            },
+        
+            {
+                title: "my first blog",
+                content: "Welcome to my blog",
+                user_id: 1,
+                imageUrl: "https://res.cloudinary.com/dkciyhgd8/image/upload/v1652130326/sample.jpg",
+
+            },
+        
+            {
+                title: "my first blog",
+                content: "Welcome to my blog",
+                user_id: 1,
+                imageUrl: "https://res.cloudinary.com/dkciyhgd8/image/upload/v1652130326/sample.jpg",
+
+            },
+        
+            {
+                title: "my first blog",
+                content: "Welcome to my blog",
+                user_id: 1,
+                imageUrl: "https://res.cloudinary.com/dkciyhgd8/image/upload/v1652130326/sample.jpg",
+
+            },
+        
+            {
+                title: "my first blog",
+                content: "Welcome to my blog",
+                user_id: 1,
+                imageUrl: "https://res.cloudinary.com/dkciyhgd8/image/upload/v1652130326/sample.jpg",
+
+            },
             {
                 content: "I got this plant from my neighbor. It's really big and green and I don't know what to name it",
                 user_id: 1,
