@@ -1,6 +1,6 @@
 const cloudName = "dry2yoyfi"; // replace with your own cloud name
 const uploadPreset = "yie0veny"; // replace with your own upload preset
-
+let imageUrl;
 
 const myWidget = cloudinary.createUploadWidget(
   {
@@ -15,7 +15,8 @@ const myWidget = cloudinary.createUploadWidget(
   },
   (error, result) => {
     if (!error && result && result.event === "success") {
-      console.log("Done! Here is the image info: ", result.info);
+      console.log("Done! Here is the image info: ", result.info.secure_url);
+      imageUrl = result.info.secure_url
       document
         .getElementById("uploadedimage")
         .setAttribute("src", result.info.secure_url);
@@ -31,3 +32,53 @@ document.getElementById("upload_widget").addEventListener(
   false
 );
 
+const handleAddBlog = function() {
+const title = document.querySelector("#title").value;
+const content = document.querySelector("#content").value;
+console.log("title", title, content)
+  fetch("/api/blogs",{
+      method:"POST",
+      body:JSON.stringify({
+        title,
+        content,
+        imageUrl
+      }),
+      headers:{
+          "Content-Type":"application/json"
+      },
+  }).then(res=>{
+      if(res.ok){
+         location.reload()
+      } else {
+          alert("trumpet sound")
+      }
+  })
+}
+document.querySelector("#newBlog").addEventListener("submit",e => 
+{ e.preventDefault()
+  console.log("hello")
+  handleAddBlog()});
+
+
+
+// document.querySelector("#newBlog").addEventListener("submit",e=>{
+//   e.preventDefault()
+//   const blogObj = {
+//       title:document.querySelector("#title").value,
+//       body:document.querySelector("#body").value,
+//       imgUrl:document.querySelector
+//   }
+//   fetch("/api/blogs",{
+//       method:"POST",
+//       body:JSON.stringify(blogObj),
+//       headers:{
+//           "Content-Type":"application/json"
+//       }
+//   }).then(res=>{
+//       if(res.ok){
+//          location.reload()
+//       } else {
+//           alert("trumpet sound")
+//       }
+//   })
+// })
