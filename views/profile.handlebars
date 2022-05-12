@@ -1,20 +1,21 @@
+
 <h1>Welcome back {{username}}</h1>
-<h2>All your blogs:</h2>
+<h3>All of your blogs:</h3>
 {{#each blogs}}
-<h3>{{title}}</h3>
+<h4>{{title}}</h4>
 <p>{{content}}</p>
 <img src ={{imageUrl}}></img>
-<button>delete</button>
+<button class="purple waves-effect waves-light btn-small">delete</button>
 <hr>
 {{/each}}
-<h3>Write about your plant:</h3>
+<h4>Write about your plant:</h4>
 <form action="" id="newBlog">
-    <input type="text" id="title" placeholder="title">
-    <textarea id="content" cols="30" rows="10"></textarea>
-    <button>Submit</button>
+    <input class="white-text text-darken-2 card-panel grey darken-3" type="text" id="title" placeholder="title">
+    <textarea class="white-text text-darken-2 card-panel grey darken-3" id="content" cols="30" rows="10"></textarea>
+    <button class="purple waves-effect waves-light btn-small">Submit</button>
 </form>
-<h3>Add Photo of your Plant</h3>
-<button id="upload_widget" class="cloudinary-button">Upload files</button>
+<h4>Add Photo of your Plant</h4>
+<button id="upload_widget" class="purple waves-effect waves-light btn-small">Upload files</button>
 <img id="uploadedimage" src="">
 </img>
 <script src="https://upload-widget.cloudinary.com/global/all.js" type="text/javascript">
