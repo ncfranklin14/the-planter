@@ -23,7 +23,7 @@ router.get("/", withAuth, async (req, res) => {
       ]
     });
     const blogList = blogData.map((blogList) => blogList.get({ plain: true }));
-    console.log(blogList)
+    // console.log(blogList)
 
     // Pass serialized data and session flag into template
     res.render('gallery', { 
@@ -35,21 +35,7 @@ router.get("/", withAuth, async (req, res) => {
   }
 });
 
-  // })
-  // }catch(err) {console.log("Error")}
 
-
-// router.get("/profile", withAuth, (req, res) => {
-//   User.findByPk(req.session.user.id, {
-//     include: [Blog],
-//   }).then((userData) => {
-//     console.log(userData);
-//     const hbsData = userData.get({ plain: true });
-//     console.log("=======");
-//     console.log(hbsData);
-//     hbsData.loggedIn = req.session.user ? true : false;
-//     res.render("profile", hbsData);
-//   });
 router.get('/profile', withAuth, async (req, res) => {
   try {
     // Find the logged in user based on the session ID
@@ -58,7 +44,6 @@ router.get('/profile', withAuth, async (req, res) => {
       include: [{ model: Blog }],
     });
     const user = userData.get({ plain: true });
-    console.log("this is something ++++++")
     console.log(user);
     res.render('profile', {
       ...user,
