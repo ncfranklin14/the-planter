@@ -39,7 +39,7 @@ app.set("view engine", "handlebars");
 
 app.use("/", allRoutes);
 
-console.log(process.env.CLOUD);
+
 
 cloudinary.config({
   cloud_name: process.env.CLOUD_NAME,

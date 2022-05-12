@@ -7,8 +7,13 @@
             <p>{{content}}</p>
             <img src ={{imageUrl}}></img>
             <hr>
+             <form action=""placeholder="Add some name suggestions" id="{{id}}" data-id="{{id}}" >
+    <textarea id="body" cols="30" rows="10"></textarea>
+    <button type="submit">Submit</button>
+</form>
             {{/each}}
         </div>
+       
     </div>
 </div>
-{{!-- <script src="/js/gallery.js"></script> --}}
+<script src="/js/gallery.js"></script>
