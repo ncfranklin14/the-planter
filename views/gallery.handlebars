@@ -2,25 +2,6 @@
 <h4>Help name our plants!</h4>
 <div class="container">
     <div class="row">
-
-        <div class="col-lg-3">
-            {{#each blogList}}
-            <h3>{{title}}</h3>
-            <p>{{content}}</p>
-            <img src ={{imageUrl}} style="width:200px; height:200px;">
-            <hr>
-             <form action=""placeholder="Add some name suggestions" id="{{id}}" data-id="{{id}}" >
-    <textarea id="body" style="width:200px; height:50px;" cols="30" rows="10"></textarea>
-    <button type="submit">Submit</button>
-</form>
-{{>comment}}
-            {{/each}}
-        </div>
-       
-    </div>
-</div>
-<script src="/js/gallery.js"></script>
-
         {{#each blogList}}
         <div class="col s6 m3">
             <div class="card">
@@ -46,6 +27,7 @@
                 </div>
         </div>
          {{/each}}
+         {{>comment}}
     </div>
     <script src="/js/gallery.js"></script>
 
