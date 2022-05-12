@@ -31,6 +31,46 @@ const seed = async () => {
                 imageUrl: "https://res.cloudinary.com/dkciyhgd8/image/upload/v1652130326/sample.jpg",
 
             },
+        
+            {
+                title: "my first blog",
+                content: "Welcome to my blog",
+                user_id: 1,
+                imageUrl: "https://res.cloudinary.com/dkciyhgd8/image/upload/v1652130326/sample.jpg",
+
+            },
+        
+            {
+                title: "my first blog",
+                content: "Welcome to my blog",
+                user_id: 1,
+                imageUrl: "https://res.cloudinary.com/dkciyhgd8/image/upload/v1652130326/sample.jpg",
+
+            },
+        
+            {
+                title: "my first blog",
+                content: "Welcome to my blog",
+                user_id: 1,
+                imageUrl: "https://res.cloudinary.com/dkciyhgd8/image/upload/v1652130326/sample.jpg",
+
+            },
+        
+            {
+                title: "my first blog",
+                content: "Welcome to my blog",
+                user_id: 1,
+                imageUrl: "https://res.cloudinary.com/dkciyhgd8/image/upload/v1652130326/sample.jpg",
+
+            },
+        
+            {
+                title: "my first blog",
+                content: "Welcome to my blog",
+                user_id: 1,
+                imageUrl: "https://res.cloudinary.com/dkciyhgd8/image/upload/v1652130326/sample.jpg",
+
+            },
             {
                 title: "my final blog",
                 content: "I cant do this anymore",
