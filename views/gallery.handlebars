@@ -2,19 +2,19 @@
 <h4 class="center-align">Help name our plants!</h4>
 <div class="container center-align">
     <div class="row">
-        {{#each blogList}}
+        {{#each blogList as | blog | }}
         <div class="col s6 m3">
             <div class="card ">
                 <div class="card-image card-panel hoverable ">
-                    <img class: "card-panel hoverable  src={{imageUrl}}>
-                    <span class=" card-title">{{title}}</span>
+                    <img class: "card-panel hoverable" src={{blog.imageUrl}}>
+                    <span class=" card-title">{{blog.title}}</span>
                 </div>
                 <div class="card-content">
-                    <p>{{content}}</p>
+                    <p>{{blog.content}}</p>
                 </div>
                 <hr>
                 <div class="card-action">
-                    <form action="" placeholder="Add some name suggestions" id="{{id}}" data-id="{{id}}">
+                    <form id="{{blog.id}}" data-id="{{blog.id}}">
                         <p>Name my plant here:</p>
                         <textarea id="body" cols="30" rows="10"></textarea>
 
@@ -22,13 +22,10 @@
                                 class="material-icons">add_cicle</i></button>
                     </form>
                 </div>
-                {{>comment}}
+                {{>comment blog=blog}} 
+                
             </div>
         </div>
-
-
-
-
         {{/each}}
     </div>
     <script src="/js/gallery.js"></script>
