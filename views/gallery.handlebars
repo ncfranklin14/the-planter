@@ -7,7 +7,7 @@
             <div class="card ">
                 <div class="card-image card-panel hoverable ">
                     <img class: "card-panel hoverable  src={{imageUrl}}>
-                    <span class="card-title">{{title}}</span>
+                    <span class=" card-title">{{title}}</span>
                 </div>
                 <div class="card-content">
                     <p>{{content}}</p>
@@ -18,25 +18,17 @@
                         <p>Name my plant here:</p>
                         <textarea id="body" cols="30" rows="10"></textarea>
 
-                        <button type="submit" class="btn-floating pulse btn-large waves-effect waves- green darken-3"><i class= "material-icons">add_cicle</i></button>
-                        <div class = "likes-section">
-
-                        <button type="submit">Submit</button>
-
-                        <div class="likes-section">
-
-                            <span class="likes">0 likes</span>
-                            <button class="like-button">❤️</button>
-                        </div>
+                        <button type="submit" class="btn-floating pulse btn-large waves-effect waves- green darken-3"><i
+                                class="material-icons">add_cicle</i></button>
                     </form>
-                     </div>
-                   {{>comment}} 
                 </div>
+                {{>comment}}
             </div>
-   
-       
+        </div>
 
 
-         {{/each}}
+
+
+        {{/each}}
     </div>
     <script src="/js/gallery.js"></script>
