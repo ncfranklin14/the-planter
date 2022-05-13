@@ -9,10 +9,10 @@ for (let index = 0; index < formELArray.length; index++) {
 element.addEventListener("submit",function(e){
     e.preventDefault()
     console.log(e.target.dataset.id)
-    console.log(e.target.children[0].value)
+    console.log(e.target.children[1].value)
 
     let data={
-        comment: e.target.children[0].value,
+        comment: e.target.children[1].value,
         blog_id: e.target.dataset.id,
 
     }
