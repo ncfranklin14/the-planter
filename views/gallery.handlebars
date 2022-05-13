@@ -17,8 +17,14 @@
                     <form action="" placeholder="Add some name suggestions" id="{{id}}" data-id="{{id}}">
                         <p>Name my plant here:</p>
                         <textarea id="body" cols="30" rows="10"></textarea>
+
                         <button type="submit" class="btn-floating pulse btn-large waves-effect waves- green darken-3"><i class= "material-icons">add_cicle</i></button>
                         <div class = "likes-section">
+
+                        <button type="submit">Submit</button>
+
+                        <div class="likes-section">
+
                             <span class="likes">0 likes</span>
                             <button class="like-button">❤️</button>
                         </div>
@@ -26,12 +32,11 @@
                      </div>
                    {{>comment}} 
                 </div>
-        </div>
-        
-     
+            </div>
+   
+       
 
 
          {{/each}}
     </div>
     <script src="/js/gallery.js"></script>
-
