@@ -35,15 +35,5 @@ router.put("/:id", withAuth, (req, res) => {
     })
 });
 
-// router.get("/:id", (req, res) => {
-//   Blog.findByPk(req.params.id, {})
-//     .then((dbBlog) => {
-//       res.json(dbBlog);
-//     })
-//     .catch((err) => {
-//       console.log(err);
-//       res.status(500).json({ msg: "an error occured", err });
-//     });
-// });
 
 module.exports = router;

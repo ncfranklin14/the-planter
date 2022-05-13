@@ -7,8 +7,8 @@ for (let index = 0; index < formELArray.length; index++) {
 
   element.addEventListener("submit", function (e) {
     e.preventDefault();
-    console.log(e.target.dataset.id);
-    console.log(e.target.children[1].value);
+    console.log(e.target);
+    console.log(e.target.value);
 
     let data = {
       comment: e.target.children[1].value,
@@ -16,7 +16,7 @@ for (let index = 0; index < formELArray.length; index++) {
     };
     console.log(e.target);
     fetch("/api/comments/", {
-      method: "POST", // *GET, POST, PUT, DELETE, etc.
+      method: "POST", 
 
       headers: {
         "Content-Type": "application/json",
@@ -33,7 +33,7 @@ for (let index = 0; index < formELArray.length; index++) {
     });
   });
 }
-//${event.target.dataset.id
+
 const handleAddLike = function (event) {
   const likes = document.querySelector(".likes").value;
   console.log(event.target.dataset.id);
