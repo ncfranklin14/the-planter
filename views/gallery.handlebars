@@ -18,16 +18,15 @@
                         <p>Name my plant here:</p>
                         <textarea id="body" cols="30" rows="10"></textarea>
                         <button type="submit">Submit</button>
-                        <div class = "likes-section">
-                            <span class="likes">0 likes</span>
-                            <button class="like-button">❤️</button>
-                        </div>
+                       
                     </form>
-                     </div>
-                </div>
+                </div> 
+                {{>comment}}
+            </div>
         </div>
-         {{/each}}
-         {{>comment}}
+
+
+       
+        {{/each}}
     </div>
     <script src="/js/gallery.js"></script>
-
