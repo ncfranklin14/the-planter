@@ -2,9 +2,11 @@
 
     {{#each comments}}
     <div class="likes-section">
-        <span class="likes">0 likes</span>
+        <span class="likes">{{like}} likes</span>
         <button data-id = {{id}} class="like-button">❤️</button>
     </div>
+    <form action="#">
+  
     <li class="collection-item">{{comment}}</li>
     {{/each}}
 </ul>

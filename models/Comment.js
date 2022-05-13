@@ -24,6 +24,7 @@ Comment.init(
     },
     like: {
       type: DataTypes.INTEGER,
+      defaultValue: 0
     },
   },
   {

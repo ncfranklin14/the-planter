@@ -1,13 +1,13 @@
-<h1>Plant Gallery:</h1>
-<h4>Help name our plants!</h4>
-<div class="container">
+<h1 class="center-align">Plant Gallery:</h1>
+<h4 class="center-align">Help name our plants!</h4>
+<div class="container center-align">
     <div class="row">
         {{#each blogList}}
         <div class="col s6 m3">
-            <div class="card">
-                <div class="card-image">
-                    <img src={{imageUrl}}>
-                    <span class="card-title">{{title}}</span>
+            <div class="card ">
+                <div class="card-image card-panel hoverable ">
+                    <img class: "card-panel hoverable  src={{imageUrl}}>
+                    <span class=" card-title">{{title}}</span>
                 </div>
                 <div class="card-content">
                     <p>{{content}}</p>
@@ -17,29 +17,18 @@
                     <form action="" placeholder="Add some name suggestions" id="{{id}}" data-id="{{id}}">
                         <p>Name my plant here:</p>
                         <textarea id="body" cols="30" rows="10"></textarea>
-                        <button type="submit">Submit</button>
-<<<<<<< HEAD
-                        <div class="likes-section">
-                            <span class="likes">0 likes</span>
-                            <button class="like-button">❤️</button>
-                        </div>
+
+                        <button type="submit" class="btn-floating pulse btn-large waves-effect waves- green darken-3"><i
+                                class="material-icons">add_cicle</i></button>
                     </form>
                 </div>
-            </div>
-        </div>
-        {{/each}}
-        {{>comment}}
-=======
-                       
-                    </form>
-                </div> 
                 {{>comment}}
             </div>
         </div>
 
 
-       
+
+
         {{/each}}
->>>>>>> dev
     </div>
     <script src="/js/gallery.js"></script>
