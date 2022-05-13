@@ -16,9 +16,6 @@ app.get('/poll', async (req, res) => {
             percentage: (((100 * votes) / aggVotes) || 0).toFixed(0)
         }
     });
-    // console.log(vote)
-
-    // console.log(aggVotes);
     
     res.json(vote);
 });
