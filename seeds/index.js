@@ -41,7 +41,7 @@ const seed = async () => {
                 imageUrl:"https://www.thespruce.com/thmb/avx3x1iviL6x8XS-rctHhHTtzd4=/941x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/bunny-ear-cactus-guide-5190802-hero-454fc58d4d5b4024931877d278ed14e9.jpg"
             }
         ])
-}
+process.exit(0)}
 
 
 seed()

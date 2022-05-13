@@ -27,7 +27,7 @@ router.get("/", withAuth, async (req, res) => {
       ],
     });
     const blogList = blogData.map((blogList) => blogList.get({ plain: true }));
-    // console.log(blogList)
+    console.log(blogList[1].comments)
 
     // Pass serialized data and session flag into template
     res.render("gallery", {
